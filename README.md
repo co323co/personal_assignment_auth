@@ -35,7 +35,7 @@
     - 회원 목록 조회
     - 회원 목록 삭제
 
-- jwt 인가*인증 (access token, refresh token) 
+- jwt 인증·인가 (access token, refresh token) 
 - Password Encryption
 - E-Mail 인증
 
