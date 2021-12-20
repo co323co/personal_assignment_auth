@@ -35,12 +35,11 @@
     - 회원 목록 조회
     - 회원 목록 삭제
 
-
+- jwt 인가*인증 (access token, refresh token) 
 - Password Encryption
+- E-Mail 인증
 
 **TODO**
-
-- E-Mail 인증
 - 비밀번호 찾기
 - 캐시
 
@@ -137,7 +136,7 @@
 
 #### 회원가입 페이지
 
-![image](https://user-images.githubusercontent.com/56910798/146709440-d10d5b1e-7298-405c-8cf3-bf37eb75943f.png)
+![image](https://user-images.githubusercontent.com/56910798/146739965-e0d2ddf9-f7af-46de-8b4b-5f9ef9f27a39.png)
 
 #### 관리자 페이지
 
