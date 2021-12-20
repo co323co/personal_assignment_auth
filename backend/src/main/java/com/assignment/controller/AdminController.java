@@ -21,7 +21,6 @@ import static com.assignment.response.ResponseStatus.*;
 @RequestMapping("/api/admin")
 @RequiredArgsConstructor
 @Slf4j
-@CrossOrigin(origins = "*")
 public class AdminController {
 
     private final UserService userService;

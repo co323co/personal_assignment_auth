@@ -28,10 +28,10 @@ public class JwtServiceImpl implements JwtService {
     @Value("${custom.constant.token.secret.key}")
     private String TOKEN_SECRET_KEY;
 
-//    private long ACCESS_TOKEN_VALIDITY_SECONDS = 60*60;
-    private long ACCESS_TOKEN_VALIDITY_SECONDS = 10;
-//    private long REFRESH_TOKEN_VALIDITY_SECONDS = 60*60*24*14;
-    private long REFRESH_TOKEN_VALIDITY_SECONDS = 20;
+    private long ACCESS_TOKEN_VALIDITY_SECONDS = 60*60;
+//    private long ACCESS_TOKEN_VALIDITY_SECONDS = 10;
+    private long REFRESH_TOKEN_VALIDITY_SECONDS = 60*60*24*14;
+//    private long REFRESH_TOKEN_VALIDITY_SECONDS = 5;
 
     public String createAccessToken(int userId) {
         Date now = new Date();

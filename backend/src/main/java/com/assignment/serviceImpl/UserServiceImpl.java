@@ -235,8 +235,8 @@ public class UserServiceImpl implements UserService {
             String generatedString = RandomStringUtils.random(10, true, true);
             SimpleMailMessage message = new SimpleMailMessage();
             message.setTo(emailInput.getEmail());
-            message.setSubject("회원가입 이메일 인증번호입니다.");
-            message.setText(generatedString);
+            message.setSubject("[개인과제] 회원가입 이메일 인증번호입니다.");
+            message.setText("안녕하세요, 회원가입 이메일 인증번호입니다.\n" + generatedString);
             emailOutput = EmailOutput.builder().auth(generatedString).build();
             mailSender.send(message);
         } catch (Exception e) {

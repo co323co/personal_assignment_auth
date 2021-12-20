@@ -25,7 +25,6 @@ import static com.assignment.response.ResponseStatus.*;
 @RequestMapping("/api/users")
 @RequiredArgsConstructor
 @Slf4j
-@CrossOrigin(origins = "*")
 public class UserController {
 
     private final UserService userService;
@@ -57,7 +56,7 @@ public class UserController {
 
     /**
      * 회원탈퇴 API
-     * [DELETE] api/users
+     * [DELETE] /api/users
      * @return ResponseEntity<<Response<Object>>
      */
     @DeleteMapping()
