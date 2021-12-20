@@ -1,6 +1,6 @@
 <template lang="">
   <v-main style="background-color: #7e57c2">
-    <v-container class="py-16">
+    <v-container class="py-16" style="width: 70%">
       <v-card elevation="7" shaped>
         <v-row class="mb-5">
           <v-col style="align-self: center; text-align: -webkit-center">

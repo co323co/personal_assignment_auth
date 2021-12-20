@@ -22,8 +22,13 @@ async function signIn(userData) {
 }
 
 // 이메일 인증번호전송 API
-function emailUser(userData) {
-  return axios.post('/users/email', userData);
+function sendEmail(userData) {
+  console.log('send email api');
+  try {
+    return axios.post('/users/email', userData);
+  } catch (error) {
+    throw error;
+  }
 }
 
 // 프로필 조회 API
@@ -57,4 +62,4 @@ function editUser(userData) {
   return axios.patch('/users', userData);
 }
 
-export { signUp, signIn, emailUser, getProfile, deleteUser, editUser, reissueAccessToken };
+export { signUp, signIn, sendEmail, getProfile, deleteUser, editUser, reissueAccessToken };

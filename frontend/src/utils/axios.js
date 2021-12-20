@@ -9,16 +9,11 @@ const axios = VueAxios.create({
   },
 });
 
-// axios.interceptors.request.use(async function (config) {
-//   config.headers['X-ACCESS-TOKEN'] = 'hi';
-// });
-
 axios.interceptors.request.use(
   function (config) {
     // 요청을 보내기 전에 수행할 일
     config.headers['X-ACCESS-TOKEN'] = store.getters.accessToken;
     config.headers['X-REFRESH-TOKEN'] = store.getters.refreshToken;
-    console.log('store.getters.accessToken', store.getters.accessToken);
     // ...
     return config;
   },
@@ -39,15 +34,22 @@ axios.interceptors.response.use(
     // 오류 응답을 처리
     // ...
     const rq = error.response.config; //요청했던 request 정보
-
     //유효하지 않은 ACCESS 토큰입니다
-    if (error.response && error.response.data.code == 402) {
-      console.log(error.response.data.message);
-      store.dispatch('verifyAuth').catch(() => {
-        alert('로그인이 만료되었습니다');
-        router.push('/sign-in');
-      });
-      return axios(rq);
+    if (error.response && error.response.data.status == 401 && error.response.data.code == 402) {
+      console.log('axios', error.response.data.message);
+      return store
+        .dispatch('verifyAuth')
+        .then(() => {
+          console.log('재발급 성공, 재요청');
+          return axios(rq);
+        })
+        .catch(() => {
+          // refresh token 유효성 X
+          console.log('재발급 실패');
+          alert('로그인이 만료되었습니다');
+          router.push('/sign-in');
+          return Promise.reject(error);
+        });
     }
     return Promise.reject(error);
   }

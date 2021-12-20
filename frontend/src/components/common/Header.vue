@@ -2,7 +2,9 @@
   <v-app-bar app absolute color="deep-purple lighten-2" dark dense>
     <v-app-bar-title class="ml-5 mb-3"> </v-app-bar-title>
 
-    <div>안녕하세요 😊{{ userInfo.userNickname }} 님, 반가워요!</div>
+    <v-btn text style="font-size: 0.9rem" @click="$router.push('/main').catch(() => {})"
+      >안녕하세요 😊{{ userInfo.userNickname }} 님, 반가워요!</v-btn
+    >
     <v-spacer></v-spacer>
     <span>[ {{ userInfo.userEmail }} ]</span>
     <v-btn class="ml-3" text @click="logout">로그아웃</v-btn>
