@@ -122,12 +122,7 @@
 
 ### DB ERD
 
-### ![img](https://user-images.githubusercontent.com/56910798/146702793-1162c02a-23be-49be-bea4-3410ffe35d10.png)![img](https://user-images.githubusercontent.com/56910798/146702793-1162c02a-23be-49be-bea4-3410ffe35d10.png)![erd](https://user-images.githubusercontent.com/56910798/146702793-1162c02a-23be-49be-bea4-3410ffe35d10.png)
-
-
-
----
-
+![img](https://user-images.githubusercontent.com/56910798/146702793-1162c02a-23be-49be-bea4-3410ffe35d10.png)
 
 
 ### 동작 화면
