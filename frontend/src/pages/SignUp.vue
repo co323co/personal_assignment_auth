@@ -50,7 +50,7 @@
                   <v-col v-if="time == 0" cols="2" class="text-center">
                     <v-progress-circular
                       v-if="isLoading"
-                      class="mt-2"
+                      class="mt-1"
                       indeterminate
                       color="red"
                     ></v-progress-circular>
